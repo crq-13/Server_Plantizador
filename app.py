@@ -47,7 +47,9 @@ def get_plantizacion(finca_id, labor_id, fecha, persona_id):
 
 
 def postPlantizacion(data):
-    r = requests.post(URL_POST_PLANTIZADOR, json=data)
+    heads = {'Authorization': 'gS8Jdz24bJgevS9loGuiCW9R2IJXLcpdme8nQ8b88No'}
+    r = requests.post(URL_POST_PLANTIZADOR, json=data, headers=heads)
+    print(r.content)
     return True
 
 
