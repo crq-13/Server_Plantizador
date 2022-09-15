@@ -61,9 +61,9 @@ async def read_data(data: Data):
     dict_data = data.dict()
     json_data = get_plantizacion(dict_data['finca_id'], dict_data['labor_id'],
                                  dict_data['fecha'], dict_data['persona_id'])
-    print(json_data)
     if len(json_data) == 0:
         return {'Error': 'No hay datos para procesar'}
     else:
         json_plantizado = plantizador_engine.plantizar(json_data)
+        postPlantizacion(json_plantizado)
         return {"plantizar": "ok"}
