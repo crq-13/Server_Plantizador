@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field, validator
 from datetime import datetime, date
 import plantizador_engine
+from fastapi.responses import HTMLResponse
 
 app = FastAPI()
 
@@ -55,7 +56,16 @@ def postPlantizacion(data):
 
 @app.get("/", tags=["Root"])
 async def read_root():
-    return {"message": "Welcome to the API!"}
+    """Basic HTML response."""
+    body = (
+        "<html>"
+        "<body style='padding: 10px;'>"
+        "<h1>It's working parce!</h1>"
+        "</body>"
+        "</html>"
+    )
+
+    return HTMLResponse(content=body)
 
 
 @app.post("/plantizar", tags=["Root"], status_code=status.HTTP_200_OK)
