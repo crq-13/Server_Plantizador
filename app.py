@@ -9,8 +9,8 @@ import plantizador_engine
 app = FastAPI()
 
 origins = ["*"]
-URL_GET_PLANTIZADOR = 'https://xup14y6trg.execute-api.us-east-2.amazonaws.com/dev/getPlantizacion'
-URL_POST_PLANTIZADOR = 'https://xup14y6trg.execute-api.us-east-2.amazonaws.com/dev/postPlantizacion'
+URL_GET_PLANTIZADOR = ' https://gqrg8swoje.execute-api.us-east-2.amazonaws.com/app/getPlantizacion'
+URL_POST_PLANTIZADOR = 'https://gqrg8swoje.execute-api.us-east-2.amazonaws.com/app/postPlantizacion'
 
 
 app.add_middleware(

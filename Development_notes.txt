@@ -1,0 +1,52 @@
+Notas de ideas para mejoras en el plantizador
+
+- Utilizar el recorrido:
+    se puede utilizar el recorrido para encontrar un orden logico en las plantas,
+    se genera una probabilidad de que la planta sea la proxima en el recorrido
+
+    Ademas se puede utililizar para detectar cuales plantas fueron visitadas sin depender de la tarjeta palma.
+
+    Se deben tener en cuenta 3 posibles tipos de recorridos:
+        1. Recorrido lineal
+        Se recorre una linea de forma lineal
+
+        2. Recorrido en zig zag
+        Se recorren dos lineas haciendo un zig zag entre ellas
+
+        3. Recorrido lineal central
+        Se recorre linealmente en medio de dos lineas
+
+    El tipo de recorrido puede depender del tipo de labor que se este ejecutando****
+
+
+- Utilizar la planta mas cercana:
+    Se usa el algoritmo actual para determinar la planta mas cercana.
+
+    Se puede mejorar descartando las plantas que en ese dia ya tengan asignada un tipo_labor,
+    Asi se reduce la posibilidad de asignar dos labores identicas a la misma planta.
+
+------------------------------------------------------------------------------------------------------------------------
+- Posterior al desarrollo de los puntos anteriores se debe iniciar un proceso de creacion de filtros:
+
+    Este proceso debe seguir el siguiente flujo:
+
+    1. Revision de datos reales de operacion en las fincasg
+    2. Identificacion de errores presentes en los recorridos
+    3. Desarrollar filtros para la solucion de estos errores
+    4. Determinar el orden optimo de la implementacion de los filtros
+
+------------------------------------------------------------------------------------------------------------------------
+28/05/2021
+
+- Los datos usados para iniciar el desarrollo del algoritmo de reconocimiento de recorrido son:
+    1. Finca: Guaicaramo id: 379
+       Fecha: 23/08/2023
+       Labor: Polinizacion id: 1
+       Persona: Fabian Bolivar id: 37143
+       Tipo de recorrido: Lineal
+
+    2. Finca: Guaicaramo id: 379
+       Fecha: 23/08/2023
+       Labor: Polinizacion id: 1
+       Persona: Jholman Bernal id: 34910
+       Tipo de recorrido: Zig Zag

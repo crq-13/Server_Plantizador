@@ -52,6 +52,7 @@ def plantizar(data_json, distancia_max=25):
     return json_final
 
 
+# funcion para relacionar las labores con la planta mas cercana
 def plantizador(plantas, labores, distancia_max):
     df_plantas = pd.DataFrame(plantas)
     df_labores = pd.DataFrame(labores)
